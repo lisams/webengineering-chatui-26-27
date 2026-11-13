@@ -1,0 +1,12 @@
+{
+  "name": "kwm-chat-ui-g2",
+  "private": true,
+  "description": "Web Engineering – Chat UI mit SCSS & BEM",
+  "scripts": {
+    "dev": "sass styles/main.scss dist/main.css --watch --style=expanded",
+    "build": "sass styles/main.scss dist/main.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.93.0"
+  }
+}

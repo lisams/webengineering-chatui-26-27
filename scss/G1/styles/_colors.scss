@@ -1,0 +1,36 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #10b981;
+  --on-primary: #ffffff;
+  --bubble-in: #ffffff;
+  --bubble-out: #dcfce7;
+  --tick-read: #3b82f6;
+  --scrollbar: #cfd6e4;
+  --chat-bg: url('../img/bg.jpg');
+  --chat-bg-size: 500px 850px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --surface: #121a2a;
+    --text: #e5e7eb;
+    --text-muted: #94a3b8;
+    --border: #1f2937;
+    --primary: #34d399;
+    --on-primary: #052e1f;
+    --bubble-in: #1e293b;
+    --bubble-out: #065f46;
+    --tick-read: #60a5fa;
+    --scrollbar: #2a3550;
+    --chat-bg: url('../img/bg-dark.jpg');
+    --chat-bg-size: 350px 600px;
+    color-scheme: dark;
+  }
+}
+

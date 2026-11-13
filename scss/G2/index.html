@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KWM Chat UI (SCSS + BEM)</title>
+  <link rel="stylesheet" href="dist/main.css" />
+</head>
+
+<body class="app">
+  <div class="layout">
+
+    <aside class="layout__sidebar sidebar">
+
+      <header class="sidebar__header">
+        <h1 class="sidebar__title">Chats</h1>
+      </header>
+
+      <div class="sidebar__search">
+        <input class="sidebar__search-input" type="search" placeholder="Suchen…" aria-label="Chats durchsuchen" />
+      </div>
+
+      <ul class="sidebar__list chat-list">
+        <li class="chat-list__item chat-list__item--active">
+          <img class="chat-list__avatar avatar" src="img/contacts/anna.jpeg" alt="Anna" />
+          <div class="chat-list__meta">
+            <div class="chat-list__name">Anna</div>
+            <div class="chat-list__preview">Perfekt, freu mich! 📎</div>
+          </div>
+          <div class="chat-list__info">
+            <time class="chat-list__time">10:13</time>
+          </div>
+        </li>
+
+        <li class="chat-list__item chat-list__item--unread">
+          <img class="chat-list__avatar avatar" src="img/contacts/max.jpeg" alt="Max" />
+          <div class="chat-list__meta">
+            <div class="chat-list__name">Max</div>
+            <div class="chat-list__preview">Hast du die Folien von letzter Woche noch?</div>
+          </div>
+          <div class="chat-list__info">
+            <time class="chat-list__time">09:41</time>
+            <span class="chat-list__badge" aria-label="2 ungelesene Nachrichten">2</span>
+          </div>
+        </li>
+
+        <li class="chat-list__item">
+          <span class="chat-list__avatar avatar avatar--placeholder" aria-hidden="true">KW</span>
+          <div class="chat-list__meta">
+            <div class="chat-list__name">KWM Jahrgang</div>
+            <div class="chat-list__preview">Lisa: Abgabe ist am Freitag!</div>
+          </div>
+          <div class="chat-list__info">
+            <time class="chat-list__time">Gestern</time>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="layout__main chat">
+
+      <header class="chat__header">
+        <div class="chat__peer">
+          <img class="chat__avatar avatar avatar--small" src="img/contacts/anna.jpeg" alt="Anna" />
+          <div>
+            <div class="chat__name">Anna</div>
+            <div class="chat__status chat__status--online">online</div>
+          </div>
+        </div>
+        <div class="chat__actions">
+          <button class="icon-button" type="button" aria-label="Im Chat suchen">🔎</button>
+          <button class="icon-button" type="button" aria-label="Mehr Optionen">⋯</button>
+        </div>
+      </header>
+
+      <section class="chat__messages messages" aria-live="polite">
+
+        <div class="messages__divider">Heute</div>
+
+        <div class="message message--in">
+          <div class="message__bubble">Hey! Wie geht's?</div>
+          <div class="message__meta">
+            <time class="message__time">10:08</time>
+          </div>
+        </div>
+
+        <div class="message message--out message--sent">
+          <div class="message__bubble">Alles gut! Und dir? 😊</div>
+          <div class="message__meta">
+            <time class="message__time">10:09</time>
+            <span class="message__status" aria-label="gesendet">✓</span>
+          </div>
+        </div>
+
+        <div class="message message--in">
+          <div class="message__bubble">Top! Treffen wir uns um 17:00 beim Hauptplatz?</div>
+          <div class="message__meta">
+            <time class="message__time">10:10</time>
+          </div>
+        </div>
+
+        <div class="message message--out message--delivered">
+          <div class="message__bubble">Passt! Bis später 👋</div>
+          <div class="message__meta">
+            <time class="message__time">10:12</time>
+            <span class="message__status" aria-label="zugestellt">✓✓</span>
+          </div>
+        </div>
+
+        <div class="message message--out message--read">
+          <div class="message__bubble">Perfekt, freu mich! 📎</div>
+          <div class="message__meta">
+            <time class="message__time">10:13</time>
+            <span class="message__status" aria-label="gelesen">✓✓</span>
+          </div>
+        </div>
+      </section>
+
+      <form class="chat__composer composer" action="#" onsubmit="return false;">
+        <button class="composer__button" type="button" aria-label="Emoji hinzufügen">😊</button>
+        <label class="composer__button" aria-label="Datei anhängen">
+          📎
+          <input type="file" multiple hidden />
+        </label>
+        <input class="composer__input" type="text" placeholder="Nachricht schreiben…" aria-label="Nachricht" />
+        <button class="composer__send" type="submit">Senden</button>
+      </form>
+    </main>
+  </div>
+</body>
+
+</html>
