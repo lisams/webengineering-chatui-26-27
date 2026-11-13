@@ -7,6 +7,6 @@
     "build": "sass styles/main.scss dist/main.css --style=compressed --no-source-map"
   },
   "devDependencies": {
-    "sass": "^1.93.0"
+    "sass": "^1.108.2"
   }
 }
