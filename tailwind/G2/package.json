@@ -1,0 +1,16 @@
+{
+  "name": "kwm-chat-ui-tailwind-g2",
+  "private": true,
+  "description": "Web Engineering – Chat UI mit SCSS, BEM & Tailwind (@apply)",
+  "scripts": {
+    "predev": "sass styles/main.scss dist/styles.css --no-source-map",
+    "dev": "concurrently -k -n sass,tailwind \"sass styles/main.scss dist/styles.css --watch --no-source-map\" \"tailwindcss -i dist/styles.css -o dist/main.css --watch\"",
+    "build": "sass styles/main.scss dist/styles.css --no-source-map && tailwindcss -i dist/styles.css -o dist/main.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "concurrently": "^9.1.0",
+    "sass": "^1.108.2",
+    "tailwindcss": "^4.3.5"
+  }
+}
