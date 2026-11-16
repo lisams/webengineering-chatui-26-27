@@ -1,4 +1,7 @@
 @use 'colors';
+@use 'layout';
+@use 'variables';
+@use 'sidebar';
 
 *,
 *::before,
@@ -12,4 +15,3 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
-

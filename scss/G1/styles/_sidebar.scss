@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        height: $header-height;
+    }
+}
