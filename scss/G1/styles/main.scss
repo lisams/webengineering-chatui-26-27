@@ -2,6 +2,10 @@
 @use 'layout';
 @use 'variables';
 @use 'sidebar';
+@use 'chat-list';
+@use 'chat';
+@use 'messages';
+@use 'composer';
 
 *,
 *::before,

@@ -1,10 +1,31 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
+    @include chatUiCard;
 
     &__header {
         height: $header-height;
+        display: flex;
+        align-items: center;
+        padding: 0 $spacing;
+        border-bottom: 1px solid var(--border);
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__search {
+        padding: $spacing;
+    }
+
+    &__search-input {
+        width: 100%;
+        @include inputfield();
+    }
+
+    &__list {
+        overflow-y: auto;
     }
 }
