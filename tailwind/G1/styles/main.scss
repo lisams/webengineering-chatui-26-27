@@ -1,1 +1,27 @@
+@use 'colors';
+@use 'tailwind';
+@use 'layout';
+@use 'variables';
+@use 'sidebar';
+@use 'chat-list';
+@use 'chat';
+@use 'messages';
+@use 'composer';
+
+// Tailwind wird als normaler CSS-Import durchgereicht (.css-Endung → Sass lässt ihn stehen)
 @import 'tailwindcss/index.css';
+
+*,
+*::before,
+*::after {
+  /* box-sizing: border-box; */
+}
+
+body {
+  /*
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  */
+}

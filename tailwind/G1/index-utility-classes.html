@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KWM Chat UI (SCSS + BEM)</title>
+  <link rel="stylesheet" href="dist/main.css" />
+</head>
+
+<body>
+  <div>
+
+    <aside>
+
+      <header>
+        <h1>Chats</h1>
+      </header>
+
+      <div>
+        <input type="search" placeholder="Suchen…" aria-label="Chats durchsuchen" />
+      </div>
+
+      <ul>
+        <li>
+          <img src="img/contacts/anna.jpeg" alt="Anna" />
+          <div>
+            <div>Anna</div>
+            <div>Perfekt, freu mich! 📎</div>
+          </div>
+          <div>
+            <time>10:13</time>
+          </div>
+        </li>
+
+        <li>
+          <img src="img/contacts/max.jpeg" alt="Max" />
+          <div>
+            <div>Max</div>
+            <div>Hast du die Folien von letzter Woche noch?</div>
+          </div>
+          <div>
+            <time>09:41</time>
+            <span aria-label="2 ungelesene Nachrichten">2</span>
+          </div>
+        </li>
+
+        <li>
+          <span aria-hidden="true">KW</span>
+          <div>
+            <div>KWM Jahrgang</div>
+            <div>Lisa: Abgabe ist am Freitag!</div>
+          </div>
+          <div>
+            <time>Gestern</time>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+
+      <header>
+        <div>
+          <img src="img/contacts/anna.jpeg" alt="Anna" />
+          <div>
+            <div>Anna</div>
+            <div>online</div>
+          </div>
+        </div>
+        <div>
+          <button type="button" aria-label="Im Chat suchen">🔎</button>
+          <button type="button" aria-label="Mehr Optionen">⋯</button>
+        </div>
+      </header>
+
+      <section aria-live="polite">
+
+        <div>Heute</div>
+
+        <div>
+          <div>Hey! Wie geht's?</div>
+          <div>
+            <time>10:08</time>
+          </div>
+        </div>
+
+        <div>
+          <div>Alles gut! Und dir? 😊</div>
+          <div>
+            <time>10:09</time>
+            <span aria-label="gesendet">✓</span>
+          </div>
+        </div>
+
+        <div>
+          <div>Top! Treffen wir uns um 17:00 beim Hauptplatz?</div>
+          <div>
+            <time>10:10</time>
+          </div>
+        </div>
+
+        <div>
+          <div>Passt! Bis später 👋</div>
+          <div>
+            <time>10:12</time>
+            <span aria-label="zugestellt">✓✓</span>
+          </div>
+        </div>
+
+        <div>
+          <div>Perfekt, freu mich! 📎</div>
+          <div>
+            <time>10:13</time>
+            <span aria-label="gelesen">✓✓</span>
+          </div>
+        </div>
+      </section>
+
+      <form action="#" onsubmit="return false;">
+        <button type="button" aria-label="Emoji hinzufügen">😊</button>
+        <label aria-label="Datei anhängen">
+          📎
+          <input type="file" multiple hidden />
+        </label>
+        <input type="text" placeholder="Nachricht schreiben…" aria-label="Nachricht" />
+        <button type="submit">Senden</button>
+      </form>
+    </main>
+  </div>
+</body>
+
+</html>

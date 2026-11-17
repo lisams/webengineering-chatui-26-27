@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.sidebar {
+    @include chatUiComponent();
+
+    &__header {
+        /*
+        min-height: $header-height;
+        padding: 0 $spacing;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--border);
+        */
+    }
+
+    &__title {
+        /*
+        font-size: 18px;
+        margin: 0;
+        */
+    }
+
+    &__search {
+        /* padding: $spacing; */
+    }
+
+    &__search-input {
+        /* width: 100%; */
+        @include input();
+    }
+
+    &__list {
+        /* overflow-y: auto; */
+    }
+}

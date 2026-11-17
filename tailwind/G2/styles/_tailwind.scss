@@ -1,0 +1,29 @@
+// Tailwind-Theme: hier werden Farben und Design-Tokens bei Tailwind registriert.
+// Die Werte selbst kommen aus den CSS-Variablen in _colors.scss.
+
+// Farben → bg-surface, text-muted, border-line, …
+// `inline` → Tailwind schreibt var(--…) direkt in die Klasse, damit Dark-Mode funktioniert
+@theme inline {
+  /*
+  --color-app: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-muted: var(--primary-muted);
+  --color-on-primary: var(--on-primary);
+  --color-bubble-in: var(--bubble-in);
+  --color-bubble-out: var(--bubble-out);
+  --color-tick-read: var(--tick-read);
+  */
+}
+
+// Design-Tokens (aus _variables.scss) → min-h-header, w-sidebar, rounded-card, …
+@theme {
+  /*
+  --spacing-header: 60px;
+  --spacing-sidebar: 340px;
+  --radius-card: 1rem;
+  */
+}

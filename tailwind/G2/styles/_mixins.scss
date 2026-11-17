@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+@mixin chatUiComponent {
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+    
+    /*
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: $border-radius;
+    overflow: hidden;
+    */
+}
+
+@mixin avatar($size: 48px) {
+    /*
+    width: $size;
+    height: $size;
+    object-fit: cover;
+    border-radius: 50%;
+    */
+}
+
+@mixin input {
+    /*
+    padding: $spacing-sm $spacing;
+    border: 1px solid var(--border);
+    border-radius: $border-radius;
+    */
+
+    &:focus {
+        /* outline: 3px solid var(--primary); */
+    }
+}
+
+@mixin emojiButton {
+    /*
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    */
+}
