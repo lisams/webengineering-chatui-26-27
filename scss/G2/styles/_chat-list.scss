@@ -1,0 +1,77 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.chat-list {
+    list-style: none;
+    padding: $spacing-sm;
+    margin: 0;
+
+    &__item {
+        display: grid;
+        grid-template-columns: 48px 1fr auto;
+        gap: $spacing-sm;
+        padding: $spacing-sm;
+        align-items: center;
+        border-radius: $border-radius;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--border);
+        }
+
+        &--active,
+        &--active:hover {
+            background: var(--primary-muted);
+        }
+    }
+
+    &__avatar {
+        @include avatar(48px);
+
+        &.avatar--placeholder {
+            background-color: var(--primary-muted);
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__meta {
+        min-width: 0;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__preview {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__time {
+        color: var(--text-muted);
+        font-size: $font-size-sm;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+
+    &__badge {
+        background: var(--primary);
+        color: var(--on-primary);
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-weight: 600;
+        font-size: $font-size-sm;
+    }
+}

@@ -1,4 +1,11 @@
 @use 'colors';
+@use 'layout';
+@use 'variables';
+@use 'sidebar';
+@use 'chat-list';
+@use 'chat';
+@use 'messages';
+@use 'composer';
 
 *,
 *::before,
@@ -12,4 +19,3 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
-

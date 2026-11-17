@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.chat {
+    @include chatUiComponent();
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border);
+        padding: $spacing;
+        min-height: $header-height;
+    }
+
+    &__peer {
+        display: flex;
+        align-items: center;
+        gap: $spacing;
+    }
+
+    &__avatar {
+        @include avatar(52px);
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__status {
+        font-size: $font-size-sm;
+        color: var(--text-muted);
+    }
+
+    &__messages {
+        flex: 1;
+    }
+
+    &__actions {
+        .icon-button {
+            @include emojiButton();
+        }
+    }
+}

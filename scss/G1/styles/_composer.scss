@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.composer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: $spacing;
+    border-top: 1px solid var(--border);
+
+    &__button {
+        @include emojiButton();
+    }
+
+    &__input {
+        flex: 1;
+        @include inputfield();
+    }
+
+    &__send {
+        cursor: pointer;
+        padding: $spacing-sm $spacing;
+        background: var(--primary);
+        color: var(--on-primary);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: $border-radius;
+        border: none;
+    }
+}
